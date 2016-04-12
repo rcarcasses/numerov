@@ -1,0 +1,11 @@
+Package: numerov
+Type: Package
+Title: Numerov
+Version: 1.0
+Date: 2016-04-07
+Author: Robert Carcassés Quevedo
+Maintainer: Robert Carcassés Quevedo <carcasses@gmail.com>
+Description: Solves a one dimensional Schrodinger problem using the Numerov algorithm.
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.12.4)
+LinkingTo: Rcpp
