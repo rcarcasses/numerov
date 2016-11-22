@@ -112,7 +112,7 @@ class Numerov {
 		// these values can be overrided later
 		double h     = 0.01;
 		double xMin  = -15;
-		double xMax  = 15;
+		double xMax  = 25;
 		double tol   = 1e-9;
 		double dEmin = 0.1;
 		int nPoints  = 1000;
@@ -301,13 +301,13 @@ double Numerov::diff(double E){
 	
 	// since we want to find preferently the right turning point we
 	// look from the minimum position to the right
-	double matchPoint = (xMax + xMin) / 2;//zbrent(shiftedPot, minPot.x, xMax, tol, true);
+	double matchPoint = zbrent(shiftedPot, minPot.x, xMax, tol, true);
 	//cout << "match point at " << matchPoint << " for E = " << E << endl;
 	int matchPointIndex = int((matchPoint - xMin) / h);
 	matchPointIndex = max(4, matchPointIndex);
 	matchPointIndex = min(nPoints - 6, matchPointIndex);
 	// for our specific problem it may be convenient just to set the match point close to the end
-	matchPointIndex = nPoints - 6;
+	// matchPointIndex = nPoints - 6;
 	// now we have to propagate left and right solutions until the matching point
 	solLR.clear();
     solLR.resize(matchPointIndex + 1);
