@@ -17,6 +17,18 @@ List rcpp_numerov() {
 }
 
 // [[Rcpp::export]]
+List getEnergiesAndIndices() {
+    vector<Mode> modes = n.getSpectrum().modes;
+    NumericVector energy, index;
+    for(int i = 0; i < modes.size(); i++){
+        energy.push_back(modes[i].energy);
+        index.push_back(modes[i].index);
+    }
+    
+    return List::create(Named("energy") = energy, Named("index") = index);
+}
+
+// [[Rcpp::export]]
 void setPotential(NumericVector px = NumericVector(), NumericVector py = NumericVector()) {
     if(px.size() != py.size()) {
         cout << "Please pass two columns with the same size for the potential" << endl;
