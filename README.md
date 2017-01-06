@@ -17,5 +17,8 @@ The arguments of the function *setPotential()* are the *x* and *y* coordinates o
 
 *getEnergies()* and *getWavefunctions()* does the obvious thing.
 
+### C++
 You can use Numerov straight in your C++ code, just include the *numerov.hpp* file in your project.
+
+If you are interested in this, you will probably be interested as well in https://github.com/rcarcasses/schrodinger.
 
