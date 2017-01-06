@@ -1,7 +1,7 @@
 Package: numerov
 Type: Package
 Title: Numerov
-Version: 1.0
+Version: 1.0.1
 Date: 2016-04-07
 Author: Robert Carcassés Quevedo
 Maintainer: Robert Carcassés Quevedo <carcasses@gmail.com>
